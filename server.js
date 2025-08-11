@@ -1,18 +1,18 @@
-    const express = requeire('express'); //importa la libreria express
-    const mongoose = requeire('mongoose');// importa la biblioteca  mongoose, ayuda  aconectarme con mongoDB
+    const express = require('express'); //importa la libreria express
+    const mongoose = require('mongoose');// importa la biblioteca  mongoose, ayuda  aconectarme con mongoDB
     //sin cors el navegador bloque solicitudes
-    const cors = requiere('cors');  // importa la liberia cors para que el navegador le de permiso a la app front para acceder
-    const dotenv = requeire('dotenv'); //modulo sin dependencias que carga variables de entorno
-    const taskRoutes = requeire(',/routes/tasks');//accediendo a directorios
-    const errorHandler = requeire(',/middleware/errorHanler');//importación para manejo de errores
+    const cors = require('cors');  // importa la liberia cors para que el navegador le de permiso a la app front para acceder
+    const dotenv = require('dotenv'); //modulo sin dependencias que carga variables de entorno
+    const taskRoutes = require(',/routes/tasks');//accediendo a directorios
+    const errorHandler = require(',/middleware/errorHanler');//importación para manejo de errores
 
     dotenv.config();//libreria y metodo, funci[on buscar.env
 
     const app = express();
 
     //Middeleware
-    app.use(cors());
-    app.use(express.json());
+    app.use(cors()); // acepta peticiones de cualquier origen
+    app.use(express.json());//traductor automatico entre cliente servidor
 
     //conectar a MongoDB
 
