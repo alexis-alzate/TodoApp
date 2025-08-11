@@ -17,8 +17,8 @@
     //conectar a MongoDB
 
     mongoose.connect(process.env.NONGODB_URI, {
-      userNewUrlParser: true
-      useUnifiedTopology: true,
+      userNewUrlParser: true // es un analizador de url
+      useUnifiedTopology: true, // topologia unificada 
     })
 
     .then((     :
